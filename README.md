@@ -22,7 +22,8 @@ What’s the average chip price by customer segment?
 
 #### Proportion of Contribution by different Life Stages in each Customer Segment
 1. **Proportion of Sales by Life Stage and Customer Segment**
-![Proportion of Sales]()
+   
+![Proportion of Sales](viz/proportion-of-sales.png)
 - **Mainstream Dominance Across Life Stages:**
     - The majority of sales come from Mainstream customers across all life stages, which aligns with the typical market behavior where mid-tier pricing attracts the broadest consumer base.
     - The highest proportion of Mainstream customers comes from Young Singles/Couples (60.5%).
@@ -34,7 +35,8 @@ What’s the average chip price by customer segment?
     - However, Older Singles/Couples have the highest proportion in the Premium category (32.9%), suggesting that a niche group of older consumers prioritize premium chip brands, possibly due to perceived health benefits or brand loyalty.
 
 2. **Proportion of Customer Count by Life Stage and Customer Segment**
-![Proportion of Customer Count]()
+   
+![Proportion of Customer Count](viz/proportion_of_customer_count.png)
 - **Mainstream Segment (Largest Count):**
     - The largest share of buyers comes from Young Singles/Couples (57.5%), followed by Mid-Age Singles/Couples (47.4%).
     - This aligns with the earlier sales distribution insights, reinforcing that younger individuals and middle-aged singles are key mainstream consumers.
@@ -48,14 +50,16 @@ While higher sales could be attributed to an increase in the number of customers
 
 #### Understanding Customer's Purchase Behaviour
 1. **Average Purchase Volume per Customer**
-![Units per Customer]()
+   
+![Units per Customer](viz/units_per_customer.png)
 - **Older Families and Young Families buy a higher number of chips per transaction across all customer segments.** This suggests that families with children or larger household sizes tend to buy in larger quantities/bulk, possibly due to frequent consumption by more people in the household.
 - **Mid-Age Singles/Couples and Young Singles/Couples purchase with the mainstream category buying slightly more than the counterparts.** Although the Young Singles/Couples purchase the least number of the chips per transaction. This may indicate that younger and mid-age individuals, especially in the budget and premium segments, have lower snack consumption, possibly due to health-conscious choices or budget constraints.
 - **Older Single/Couples and Retirees show a balanced purchase pattern, with budget and premium segments slightly preferring more units per transaction.** This could imply a preference for quality over quantity or budget-conscious buying behavior.
 - **New Families display a consistent trend across all segments,** suggesting that their purchasing habits are stable and do not vary significantly based on pricing categories.
 
 2. **Average Unit Price per Customer**
-![Unit Price]()
+   
+![Unit Price](viz/unit_price.png)
 - Young Singles/Couples and Mid Age Singles/Couples in the Mainstream customer segment are more willing to pay more per pack compared to their Budget and Premium counterparts.
 - Premium customers across all life stages have a lower unit price per transaction.
     - This could indicate that they either buy healthier alternatives (e.g., baked, organic, or gourmet snacks) which may not be included in the standard "chips" category or that they indulge in chips less frequently.
@@ -70,7 +74,7 @@ So far the indication is that customers in Young Singles/Couples and Mid Age Sin
 **Null Hypothesis(H₀):** The average price per unit paid by Mainstream customers is not significantly higher than that paid by Budget and Premium customers within the Young Singles/Couples and Mid-Age Singles/Couples life stages.
 
 ###### t-test results
-![t-test result]()
+![t-test result](viz/cs_ttest.png)
 - The high t-value indicates a substantial difference between the means of the two group. With a large sample size and a degrees of freedom (df) of 57,365, the test results are highly reliable.
 
 -  The lower bound (0.0095) suggests that, with 95% confidence, the true difference in means is at least 0.0095. Since the upper bound is infinity (Inf), it further confirms that the difference is positive.
@@ -126,16 +130,16 @@ For each trial store, the top-ranked store with the highest similarity score was
 
 #### Trial Store 77
 Store 233 is matched with trial store 77
-![Sales 233]()
-![Customer count 233]()
+![Sales 77](viz/sales_77.png)
+![Customer count 77](viz/customer_count_77.png)
 #### Trial Store 86
 Store 155 is matched with trial store 86
-![Sales 155]()
-![Customer count 155]()
+![Sales 86](viz/sales_86.png)
+![Customer count 86](viz/customer_count_86.png)
 #### Trial Store 88
 Store 237 is matched with trial store 88
-![Sales 237]()
-![Customer count 237]()
+![Sales 88](viz/sales_88.png)
+![Customer count 88](viz/customer_count_88.png)
 
 
 ### Assessment for Uplift
@@ -146,31 +150,31 @@ The trial period ran from February 2019 to April 2019. We then analyzed whether 
 #### t-test result
 *The t-test was conducted with 7 degrees of freedom (df = 7). At a 95% confidence level, the t-critical value was 1.89.*
 #### Trial Store 77 and Control Store 233
-![Sales uplift 233]()  
-![Sales t-test 233]()
+![Sales uplift 77](viz/sales_uplift_77.png)  
+![Sales t-test 77](viz/sales_ttest_77.png)
 - The t-test results indicate that the sales uplift in the trial store during March(7.33) and April(12.47) is statistically significant (t-values > 1.89), confirming that the difference is unlikely due to random fluctuations. 
 - Additionally, the trial store’s performance falls outside the 5%-95% confidence interval of the control store in two of the three trial months, further validating the impact of the strategic changes.
-![Customer count uplift 233]()
-![Customer count t-test 233]()
+![Customer count uplift 77](viz/customer_count_uplift_77.png)
+![Customer count t-test 77](viz/customer_count_ttest_77.png)
 - The t-values for March (13.48) and April (30.78) are far above the critical threshold (1.89), confirming that the increase in customer count in the trial store is statistically significant and not due to random fluctuations.
 - Before the trial period, customer trends in the trial and control stores were closely aligned within the 5%-95% confidence interval. During March and April, the trial store's customer count deviates noticeably above the confidence interval of the control store, further validating the effectiveness of the intervention.
 #### Trial Store 86 and and Control Store 155
 Store 155 is matched with trial store 86
-![Sales uplift 155]()
-![Sales t-test 155]()
+![Sales uplift 86](viz/sales_uplift_86.png)
+![Sales t-test 86](viz/sales_ttest_86.png)
 - The t-values for March (12.22) are far above the critical threshold (1.89), confirming that the increase in salesin the trial store is statistically significant and not due to random fluctuations.
 - The trial store saw a significant sales surge in March, exceeding the control store’s 95% confidence interval, confirming a statistically significant impact. However, April’s sales dropped closer to the control store, suggesting the effect was not sustained.
-![Customer count uplift 155]()
-![Customer count t-test 155]()
+![Customer count uplift 86](viz/customer_count_uplift_86.png)
+![Customer count t-test 86](viz/customer_count_ttest_86.png)
 - The trial store attracted significantly more customers in all three months, as indicated by high t-values. However, sales were not consistently higher, suggesting potential price reductions or promotions. It's worth confirming with the Category Manager whether special deals influenced the results.
 #### Trial Store 88 and Control Store 237
 Store 237 is matched with trial store 88
-![Sales uplift 237]()
-![Sales t-test 237]()
+![Sales uplift 88](viz/sales_uplift_88.png)
+![Sales t-test 88](viz/sales_ttest_88.png)
 - The t-values for March (6.60) and April (5.77) are significantly larger than the critical value at the 95% confidence level, indicating that the increase in sales in the trial store during these months is statistically significant compared to the control store.
 - The sales performance of the trial store in March and April is outside the control store’s 5% to 95% confidence interval range, reinforcing the statistical difference.
 - The decline in April compared to March suggests that while the trial was effective, its impact may be tapering off.
-![Customer count uplift 237]()
-![Customer count t-test 237]()
+![Customer count uplift 88](viz/customer_count_uplift_88.png)
+![Customer count t-test 88](viz/customer_count_ttest_88.png)
 - The t-values for March (17.87) and April (9.81) are significantly larger than the critical value at the 95% confidence level, indicating that the increase in customer count in the trial store during these months is statistically significant compared to the control store.
 - The customer count of the trial store in March and April is outside the control store’s 5% to 95% confidence interval range, reinforcing the statistical difference.
