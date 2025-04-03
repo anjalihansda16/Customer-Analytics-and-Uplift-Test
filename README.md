@@ -1,5 +1,20 @@
 ## Customer Analytics and Uplift Testing
 
+Table of Contents:
+- [Background](#background)
+- [ERD](#erd)
+- [Executive Summary](#executive-summary)
+- [Customer Analytics](#customer-analytics)
+   - [Proportion of Contribution by different Life Stages in each Customer Segment](#proportion-of-contribution-by-different-life-stages-in-each-customer-segment)
+   - [Understanding Customer Purchase Behaviour](#understanding-customer-purchase-behaviour)
+   - [t-test](#t-test)
+   - [Understanding the Target Customer Purchase Preferences](#understanding-the-target-customer-purchase-preferences)
+- [Recommendations](#recommendations)
+- [Uplift Testing](#uplift-testing)
+
+
+
+
 ### Background: 
 ShopEase, a leading national supermarket chain, is looking to boost sales in its chips category by better understanding customer preferences and purchasing behavior. As part of Quantium’s retail analytics team, I’m partnering with the category Manager for Chips to extract insights that will shape the supermarket’s chip category strategy for the next six months, helping drive growth and optimize product offerings.
 
@@ -18,7 +33,7 @@ How many customers are in each segment?
 How many chips are bought per customer by segment?
 What’s the average chip price by customer segment?
 
-#### Proportion of Contribution by different Life Stages in each Customer Segment
+### Proportion of Contribution by different Life Stages in each Customer Segment
 1. **Proportion of Sales by Life Stage and Customer Segment**
    
 ![Proportion of Sales](viz/proportion-of-sales.png)
@@ -46,7 +61,7 @@ What’s the average chip price by customer segment?
 
 While higher sales could be attributed to an increase in the number of customers, another possible driver is the number of unit price and units purchased per customer. 
 
-#### Understanding Customer's Purchase Behaviour
+### Understanding Customer Purchase Behaviour
 1. **Average Purchase Volume per Customer**
    
 ![Units per Customer](viz/units_per_customer.png)
@@ -71,7 +86,7 @@ So far the indication is that customers in Young Singles/Couples and Mid Age Sin
 ### t-test
 **Null Hypothesis(H₀):** The average price per unit paid by Mainstream customers is not significantly higher than that paid by Budget and Premium customers within the Young Singles/Couples and Mid-Age Singles/Couples life stages.
 
-###### t-test results
+###### **t-test results**
 
 - The high t-value indicates a substantial difference between the means of the two group. With a large sample size and a degrees of freedom (df) of 57,365, the test results are highly reliable.
 
@@ -81,7 +96,7 @@ So far the indication is that customers in Young Singles/Couples and Mid Age Sin
 
 - Finally, the p-value is effectively 0, signifying that the difference is highly statistically significant.
 
-#### Understanding the Target Customer's Purchase Preferences
+### Understanding the Target Customer Purchase Preferences
 Based on the client's direction, the Young Singles/Couples and Mid-Age Singles/Couples segment within the Mainstream customer segment has been selected as the target audience for strategic planning in the chip segment. Therefore, we analyzed their purchase preferences to gain deeper insights.
 
 1. **Brand Affinity of Target Customers:**
@@ -97,7 +112,7 @@ Based on the client's direction, the Young Singles/Couples and Mid-Age Singles/C
 
 
 
-### Recommendations
+## Recommendations
 1. **Strategically Off-Locating High-Affinity Brands & Pack Sizes:**
 - Increase visibility of Tyrrells, Twisties, Kettle, and Cobs Popped in discretionary spaces near locations frequented by target customers (e.g., checkout aisles, premium snack sections, and convenience grab-and-go areas).
 - Leverage strategic placements to drive impulse purchases and reinforce brand loyalty.
