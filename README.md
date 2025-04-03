@@ -7,7 +7,7 @@ Table of Contents:
 - [Customer Analytics](#customer-analytics)
    - [Proportion of Contribution by different Life Stages in each Customer Segment](#proportion-of-contribution-by-different-life-stages-in-each-customer-segment)
    - [Understanding Customer Purchase Behaviour](#understanding-customer-purchase-behaviour)
-   - [t-test](#t-test)
+   - [Indentifying the Target Customer Segment with T-Test Analysis](#indentifying-the-target-customer-segment-with-t-test-analysis)
    - [Understanding the Target Customer Purchase Preferences](#understanding-the-target-customer-purchase-preferences)
 - [Recommendations](#recommendations)
 - [Uplift Testing](#uplift-testing)
@@ -16,9 +16,7 @@ Table of Contents:
 
 
 ### Background: 
-ShopEase, a leading national supermarket chain, is looking to boost sales in its chips category by better understanding customer preferences and purchasing behavior. As part of Quantium’s retail analytics team, I’m partnering with the category Manager for Chips to extract insights that will shape the supermarket’s chip category strategy for the next six months, helping drive growth and optimize product offerings.
-
-
+ShopEase, a leading national supermarket chain, is looking to boost sales in its **chips category** by optimizing store layouts and enhancing customer engagement. As part of **Quantium’s retail analytics team**, I’m partnering with the **Category Manager for Chips** to analyze target customer behavior and preferences to design a layout that aligns with their shopping patterns. Using a **data-driven approach**, we aim to evaluate the impact of the new trial layouts and determine whether they should be rolled out across all stores to drive sales growth and improve the overall shopping experience.
 
 
 ### ERD:
@@ -28,10 +26,11 @@ ShopEase, a leading national supermarket chain, is looking to boost sales in its
 
 ## Customer Analytics
 Defining metrics that'll help understand the customer segments and their purchasing behaviour:
-Who spends the most on chips (total sales), describing customers by life stage and how premium their general purchasing behaviour is?
-How many customers are in each segment?
-How many chips are bought per customer by segment?
-What’s the average chip price by customer segment?
+
+- Who spends the most on chips (total sales), describing customers by life stage and how premium their general purchasing behaviour is?
+- How many customers are in each segment?
+- How many chips are bought per customer by segment?
+- What’s the average chip price by customer segment?
 
 ### Proportion of Contribution by different Life Stages in each Customer Segment
 1. **Proportion of Sales by Life Stage and Customer Segment**
@@ -81,20 +80,20 @@ While higher sales could be attributed to an increase in the number of customers
     - This shows little price sensitivity for these customers.
     - However, the slight variations in pricing could indicate differences in pack sizes or preferred brands.
 
-So far the indication is that customers in Young Singles/Couples and Mid Age Singles/Couples Lifestage of the Mainstream customer segment spend more on chips compared to other customer segments of the same life stage. 
+So far the indication is that customers in Young Singles/Couples and Mid Age Singles/Couples life stage of the Mainstream customer segment spend more on chips compared to other customer segments of the same life stage. 
 
-### t-test
+### Indentifying the Target Customer Segment with T-Test Analysis
 **Null Hypothesis(H₀):** The average price per unit paid by Mainstream customers is not significantly higher than that paid by Budget and Premium customers within the Young Singles/Couples and Mid-Age Singles/Couples life stages.
 
-###### **t-test results**
+#### **t-test results**
 
-- The high t-value indicates a substantial difference between the means of the two group. With a large sample size and a degrees of freedom (df) of 57,365, the test results are highly reliable.
+- The high t-value (37.62) indicates a substantial difference between the means of the two group. With a large sample size and a degrees of freedom (df) of 57,365, the test results are highly reliable.
 
 -  The lower bound (0.0095) suggests that, with 95% confidence, the true difference in means is at least 0.0095. Since the upper bound is infinity (Inf), it further confirms that the difference is positive.
 
 - Therefore, we reject the null hypothesis (H₀) and confirm that the Young Singles/Couples and Mid-Age Singles/Couples life stages within the Mainstream customer segment pay significantly more per unit than Budget & Premium customers.
 
-- Finally, the p-value is effectively 0, signifying that the difference is highly statistically significant.
+- Finally, the p-value (3.48e-306) is effectively 0, signifying that the difference is highly statistically significant.
 
 ### Understanding the Target Customer Purchase Preferences
 Based on the client's direction, the Young Singles/Couples and Mid-Age Singles/Couples segment within the Mainstream customer segment has been selected as the target audience for strategic planning in the chip segment. Therefore, we analyzed their purchase preferences to gain deeper insights.
@@ -141,51 +140,53 @@ To determine the final control store, a composite score by weighting correlation
 
 For each trial store, the top-ranked store with the highest similarity score was selected as the control store. Trends for key drivers (monthly sales and customer count), were then visually ascertained for each trial store.
 
-#### Trial Store 77
-Store 233 is matched with trial store 77
+#### 1. Trial Store 77 matched with Control Store 233 
 ![Sales 77](viz/sales_77.png)
 ![Customer count 77](viz/customer_count_77.png)
-#### Trial Store 86
-Store 155 is matched with trial store 86
+
+#### 2. Trial Store 86 matched with Control Store 155
 ![Sales 86](viz/sales_86.png)
 ![Customer count 86](viz/customer_count_86.png)
-#### Trial Store 88
-Store 237 is matched with trial store 88
+
+#### 3. Trial Store 88 matched with Control Store 237
 ![Sales 88](viz/sales_88.png)
 ![Customer count 88](viz/customer_count_88.png)
 
 
-### Assessment for Uplift
+### Assessment for Uplift with T-Test
 The trial period ran from February 2019 to April 2019. We then analyzed whether the strategic changes resulted in an increase in sales or monthly customer count in the trial stores.
 
 **Null Hypothesis (H₀):** Sales during the trial period are the same as sales or customer count during the pre-trial period.
 
-#### t-test result
+
 *The t-test was conducted with 7 degrees of freedom (df = 7). At a 95% confidence level, the t-critical value was 1.89.*
-#### Trial Store 77 and Control Store 233
+
+#### 1. Trial Store 77 and Control Store 233
 
 ![Sales uplift 77](viz/sales_uplift_77.png)  
 
-- The t-test results indicate that the sales uplift in the trial store during March(7.33) and April(12.47) is statistically significant (t-values > 1.89), confirming that the difference is unlikely due to random fluctuations. 
+- The t-test results show that the impact of the trial layout on sales became statistically significant in March (7.34) and April (12.48), as both values exceed the critical threshold (1.89). However, February’s t-value (1.18) suggests no significant difference at the start of the trial. This indicates that the new layout had a delayed but strong effect on increasing sales, confirming that the difference is unlikely due to random fluctuations. 
 - Additionally, the trial store’s performance falls outside the 5%-95% confidence interval of the control store in two of the three trial months, further validating the impact of the strategic changes.
   
 ![Customer count uplift 77](viz/customer_count_uplift_77.png)
 
-- The t-values for March (13.48) and April (30.78) are far above the critical threshold (1.89), confirming that the increase in customer count in the trial store is statistically significant and not due to random fluctuations.
+- The t-values for March (13.48) and April (30.78) are far above the critical threshold (1.89), confirming that the increase in customer count in the trial store is statistically significant and not due to random fluctuations while February (0.18) indicates no notable change at the start of the trial. This suggests that the new layout effectively drove higher foot traffic, but its impact took a month to materialize.
 - Before the trial period, customer trends in the trial and control stores were closely aligned within the 5%-95% confidence interval. During March and April, the trial store's customer count deviates noticeably above the confidence interval of the control store, further validating the effectiveness of the intervention.
-#### Trial Store 86 and and Control Store 155
-Store 155 is matched with trial store 86
+  
+#### 2. Trial Store 86 and Control Store 155
 
 ![Sales uplift 86](viz/sales_uplift_86.png)
 
-- The t-values for March (12.22) are far above the critical threshold (1.89), confirming that the increase in salesin the trial store is statistically significant and not due to random fluctuations.
+- The t-test results indicate that sales saw a statistically significant increase in March (12.23), confirming the impact on sales of the trial layout is statistically significant. However, February (2.18) and April (1.36) show weaker effects, suggesting that the sales boost was slow to uptake asnd short-lived.
 - The trial store saw a significant sales surge in March, exceeding the control store’s 95% confidence interval, confirming a statistically significant impact. However, April’s sales dropped closer to the control store, suggesting the effect was not sustained.
 
 ![Customer count uplift 86](viz/customer_count_uplift_86.png)
 
-- The trial store attracted significantly more customers in all three months, as indicated by high t-values. However, sales were not consistently higher, suggesting potential price reductions or promotions. It's worth confirming with the Category Manager whether special deals influenced the results.
-#### Trial Store 88 and Control Store 237
-Store 237 is matched with trial store 88
+- The trial store attracted significantly more customers in all three months, February (11.81), March (20.90) and April (5.67), as indicated by high t-values.
+- The trial store outperformed the control store’s 5%-95% confidence interval in all the three months, reinforcing the impact of the strategic changes.
+- However, sales were not consistently higher, suggesting potential price reductions or promotions. It's worth confirming with the Category Manager whether special deals influenced the results.
+  
+#### 3. Trial Store 88 and Control Store 237
 
 ![Sales uplift 88](viz/sales_uplift_88.png)
 
@@ -197,3 +198,12 @@ Store 237 is matched with trial store 88
 
 - The t-values for March (17.87) and April (9.81) are significantly larger than the critical value at the 95% confidence level, indicating that the increase in customer count in the trial store during these months is statistically significant compared to the control store.
 - The customer count of the trial store in March and April is outside the control store’s 5% to 95% confidence interval range, reinforcing the statistical difference.
+
+## Conclusion
+The results of the trial strongly indicate that the **new store layouts had a measurable impact on customer behavior and sales performance**. Across all trial stores, **customer count increased significantly**, suggesting that the new layout successfully attracted more shoppers. However, the effect on **sales varied**, with some stores maintaining higher sales while others experienced fluctuations, potentially influenced by pricing strategies or promotions.  
+
+- **Trial Store 77:** Both **sales and customer count saw sustained increases**, confirming the effectiveness of the new layout in driving growth.  
+- **Trial Store 86:** Customer count increased consistently, but **sales uplift was not sustained**, raising the possibility of discounts or promotions influencing results.  
+- **Trial Store 88:** A **strong initial sales increase** was observed, but the impact declined in April, suggesting the effect may taper off over time.  
+
+Given the consistent uplift in customer traffic and **statistically significant sales increases in multiple trial stores**, rolling out the new layout to additional locations appears **promising**. However, the mixed impact on sales suggests that **further refinement**—such as optimizing pricing strategies or promotional offers—may be needed to maximize long-term revenue growth. Before full-scale implementation, **additional trials or analysis on pricing and product placement strategies may be beneficial** to ensure sustained success.
