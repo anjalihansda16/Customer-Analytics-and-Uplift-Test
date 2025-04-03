@@ -1,9 +1,7 @@
 ## Customer Analytics and Uplift Testing
 
 ### Background: 
-You are part of Quantium’s retail analytics team and have been approached by your client, the Category Manager for Chips, who wants to better understand the types of customers who purchase Chips and their purchasing behaviour.
-The insights from your analysis will feed into the supermarket’s strategic plan for the chip category in the next half year.
-
+ShopEase, a leading national supermarket chain, is looking to boost sales in its chips category by better understanding customer preferences and purchasing behavior. As part of Quantium’s retail analytics team, I’m partnering with the category Manager for Chips to extract insights that will shape the supermarket’s chip category strategy for the next six months, helping drive growth and optimize product offerings.
 
 
 
