@@ -74,11 +74,11 @@ While higher sales could be attributed to an increase in the number of customers
 2. **Average Unit Price per Customer**
    
 ![Unit Price](viz/unit_price.png)
-- Young Singles/Couples and Mid Age Singles/Couples in the Mainstream customer segment are more willing to pay more per pack compared to their Budget and Premium counterparts.
-- Premium customers across all life stages have a lower unit price per transaction.
+- **Young Singles/Couples and Mid Age Singles/Couples in the Mainstream customer segment are more willing to pay more per pack compared to their Budget and Premium counterparts.**
+- **Premium customers across all life stages have a lower unit price per transaction.**
     - This could indicate that they either buy healthier alternatives (e.g., baked, organic, or gourmet snacks) which may not be included in the standard "chips" category or that they indulge in chips less frequently.
     - The trend is further supported by the observation that fewer Premium Young Singles/Couples and Mid-Age Singles/Couples purchase chips compared to their Mainstream counterparts.
-- Retirees, Older Singles/Couples, and Families (Young, Older and New) exhibit consistent spending behavior across all customer segments.
+- **Retirees, Older Singles/Couples, and Families (Young, Older and New) exhibit consistent spending behavior across all customer segments.**
     - This shows little price sensitivity for these customers.
     - However, the slight variations in pricing could indicate differences in pack sizes or preferred brands.
 
