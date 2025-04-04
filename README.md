@@ -2,27 +2,29 @@
 
 Table of Contents:
 - [Background](#background)
-- [ERD](#erd)
 - [Executive Summary](#executive-summary)
 - [Customer Analytics](#customer-analytics)
    - [Proportion of Contribution by different Life Stages in each Customer Segment](#proportion-of-contribution-by-different-life-stages-in-each-customer-segment)
    - [Understanding Customer Purchase Behaviour](#understanding-customer-purchase-behaviour)
    - [Indentifying the Target Customer Segment with T-Test Analysis](#indentifying-the-target-customer-segment-with-t-test-analysis)
    - [Understanding the Target Customer Purchase Preferences](#understanding-the-target-customer-purchase-preferences)
-- [Recommendations](#recommendations)
+   - [Recommendations](#recommendations)
 - [Uplift Testing](#uplift-testing)
-
-
+  - [Control Store Selection](#control-store-selection)
+  - [Assessment for Uplift with T-Test](#assessment-for-uplift-with-t-test)
+  - [Impact Summary and Recommendations](#impact-summary-and-recommendations)
 
 
 ### Background: 
-ShopEase, a leading national supermarket chain, is looking to boost sales in its **chips category** by optimizing store layouts and enhancing customer engagement. As part of **Quantium’s retail analytics team**, I’m partnering with the **Category Manager for Chips** to analyze target customer behavior and preferences to design a layout that aligns with their shopping patterns. Using a **data-driven approach**, we aim to evaluate the impact of the new trial layouts and determine whether they should be rolled out across all stores to drive sales growth and improve the overall shopping experience.
-
-
-### ERD:
+ShopEase, a leading national supermarket chain, is looking to boost sales in its chips category by optimizing store layouts and enhancing customer engagement. As part of Quantium’s retail analytics team, I’m partnering with the Category Manager for Chips to analyze target customer behavior and preferences to design a layout that aligns with their shopping patterns. Using a data-driven approach, we aim to evaluate the impact of the new trial layouts and determine whether they should be rolled out across all stores to drive sales growth and improve the overall shopping experience.
 
 
 ## Executive Summary
+Customers in the Young & Mid-Age Singles/Couples life stages of the Mainstream segment emerged as the key chip buyers, as they spend significantly more per unit than their Budget and Premium counterparts. These target customers show a strong preference for brands like Tyrrells, Twisties, and Kettle, and are more likely to purchase 270g pack sizes, especially Twisties, which dominates this size category.
+
+Based on these insights, store layout recommendations were developed to better align with the shopping behavior of this segment and to drive category sales. To evaluate the effectiveness of these changes, a 3-month trial was conducted in selected stores (February to April).
+
+The results showed significant increases in both sales and customer traffic, particularly in March and April, confirming the positive impact of the new layouts. However, one trial store experienced a drop in impact by April, indicating the importance of maintaining customer interest through ongoing engagement strategies such as promotions or refreshed displays.
 
 ## Customer Analytics
 Defining metrics that'll help understand the customer segments and their purchasing behaviour:
@@ -111,9 +113,9 @@ Based on the client's direction, the Young Singles/Couples and Mid-Age Singles/C
 
 
 
-## Recommendations
+### Recommendations
 1. **Strategically Off-Locating High-Affinity Brands & Pack Sizes:**
-- Increase visibility of Tyrrells, Twisties, Kettle, and Cobs Popped in discretionary spaces near locations frequented by target customers (e.g., checkout aisles, premium snack sections, and convenience grab-and-go areas).
+- Increase visibility of Tyrrells, Twisties, Kettle, and Cobs Popped in discretionary spaces near locations frequented by target customers (e.g., checkout aisles and convenience grab-and-go areas).
 - Leverage strategic placements to drive impulse purchases and reinforce brand loyalty.
 
 2. **Optimizing Brand Placement for Maximum Impact**
@@ -127,6 +129,7 @@ Based on the client's direction, the Young Singles/Couples and Mid-Age Singles/C
     - Highlighting large-pack value messaging in promotional campaigns to cater to this shared preference.
 
 ## Uplift Testing
+### Control Store Selection
 The client selected stores 77, 86, and 88 as trial stores. To ensure a reliable comparison, we established control stores that remained operational throughout the observation period. The control stores were matched to the trial stores based on **monthly overall sales** and **monthly customer count** prior to the trial period (before February 2019).
 
 We used a data-driven matching process based on two key measures:
@@ -154,7 +157,7 @@ For each trial store, the top-ranked store with the highest similarity score was
 
 
 ### Assessment for Uplift with T-Test
-The trial period ran from February 2019 to April 2019. We then analyzed whether the strategic changes resulted in an increase in sales or monthly customer count in the trial stores.
+The trial period ran for 3 months, from February 2019 to April 2019. We then analyzed whether the strategic changes resulted in an increase in sales or monthly customer count in the trial stores.
 
 **Null Hypothesis (H₀):** Sales during the trial period are the same as sales or customer count during the pre-trial period.
 
@@ -192,18 +195,17 @@ The trial period ran from February 2019 to April 2019. We then analyzed whether 
 
 - The t-values for March (6.60) and April (5.77) are significantly larger than the critical value at the 95% confidence level, indicating that the increase in sales in the trial store during these months is statistically significant compared to the control store.
 - The sales performance of the trial store in March and April is outside the control store’s 5% to 95% confidence interval range, reinforcing the statistical difference.
-- The decline in April compared to March suggests that while the trial was effective, its impact may be tapering off.
+- February (0.78) suggests no meaningful change at the start of the trial and the decline in April compared to March suggests that while the trial was effective, its impact may be tapering off.
 
 ![Customer count uplift 88](viz/customer_count_uplift_88.png)
 
-- The t-values for March (17.87) and April (9.81) are significantly larger than the critical value at the 95% confidence level, indicating that the increase in customer count in the trial store during these months is statistically significant compared to the control store.
+- The t-values for March (17.87) and April (9.81) are significantly larger than the critical value at the 95% confidence level, indicating that the increase in customer count in the trial store during these months is statistically significant compared to the control store. February (1.39) shows a smaller impact, implying a delayed effect of the changes.
 - The customer count of the trial store in March and April is outside the control store’s 5% to 95% confidence interval range, reinforcing the statistical difference.
 
-## Conclusion
-The results of the trial strongly indicate that the **new store layouts had a measurable impact on customer behavior and sales performance**. Across all trial stores, **customer count increased significantly**, suggesting that the new layout successfully attracted more shoppers. However, the effect on **sales varied**, with some stores maintaining higher sales while others experienced fluctuations, potentially influenced by pricing strategies or promotions.  
+### Impact Summary and Recommendations
 
-- **Trial Store 77:** Both **sales and customer count saw sustained increases**, confirming the effectiveness of the new layout in driving growth.  
-- **Trial Store 86:** Customer count increased consistently, but **sales uplift was not sustained**, raising the possibility of discounts or promotions influencing results.  
-- **Trial Store 88:** A **strong initial sales increase** was observed, but the impact declined in April, suggesting the effect may taper off over time.  
+The trial store analysis provides clear evidence that the new store layout positively impacted both sales and customer count, particularly in March and April. 
 
-Given the consistent uplift in customer traffic and **statistically significant sales increases in multiple trial stores**, rolling out the new layout to additional locations appears **promising**. However, the mixed impact on sales suggests that **further refinement**—such as optimizing pricing strategies or promotional offers—may be needed to maximize long-term revenue growth. Before full-scale implementation, **additional trials or analysis on pricing and product placement strategies may be beneficial** to ensure sustained success.
+Sales and customer footfall rose significantly in March and April across all trial stores, with Stores 77 and 88 showing the strongest uplift—signaling the new layout’s clear positive impact. February saw minimal change, indicating a short adjustment period for shoppers. Trial Store 86 showed a sharp sales spike in March, but this tapered off by April, although customer count remained consistently high—suggesting a disconnect between traffic and sales uplift. Store 88 also saw a modest decline in April, pointing to a gradual tapering of the layout’s influence. These patterns indicate that while the layout successfully drives short-term gains, sustaining momentum may require ongoing efforts like targeted promotions, refreshed product placement, or customer engagement initiatives.
+
+The trial results strongly support rolling out the new layout to all stores, particularly in locations where customer behavior aligns with Trial Stores 77 and 88. However, further analysis is recommended to understand the sustainability of the impact and whether additional strategies, such as targeted promotions, can maintain sales growth over a longer period.
